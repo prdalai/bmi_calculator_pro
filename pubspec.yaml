@@ -1,7 +1,9 @@
 name: bmi_calculator_pro
-description: "A simple, cross-platform Flutter package for BMI calculation, compatible with Android, iOS, Wear OS, and watchOS."
-version: 1.0.1
-homepage: https://prashantrdalai.com
+description: A BMI calculator package supporting kg/cm and lbs/inches units, with conversion utilities.
+version: 1.0.2
+homepage: https://github.com/prdalai/bmi_calculator_pro
+repository: https://github.com/prdalai/bmi_calculator_pro
+documentation: https://pub.dev/documentation/bmi_calculator_pro/latest/
 
 environment:
   sdk: ^3.5.0

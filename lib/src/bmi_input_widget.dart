@@ -1,11 +1,10 @@
 import 'package:bmi_calculator_pro/utils/unit_conversion.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class BMIInputWidget extends StatefulWidget {
   final Function(double weight, double height, String unit) onCalculate;
 
-  const BMIInputWidget({required this.onCalculate, Key? key}) : super(key: key);
+  const BMIInputWidget({required this.onCalculate, super.key});
 
   @override
   _BMIInputWidgetState createState() => _BMIInputWidgetState();
@@ -25,13 +24,13 @@ class _BMIInputWidgetState extends State<BMIInputWidget> {
         children: [
           TextField(
             controller: _weightController,
-            keyboardType: TextInputType.numberWithOptions(decimal: true),
+            keyboardType: const TextInputType.numberWithOptions(decimal: true),
             decoration: InputDecoration(
                 labelText: _selectedUnit.startsWith('Metric') ? 'Weight (kg)' : 'Weight (lbs)'),
           ),
           TextField(
             controller: _heightController,
-            keyboardType: TextInputType.numberWithOptions(decimal: true),
+            keyboardType: const TextInputType.numberWithOptions(decimal: true),
             decoration: InputDecoration(
                 labelText: _selectedUnit.startsWith('Metric') ? 'Height (cm)' : 'Height (inches)'),
           ),
@@ -50,7 +49,7 @@ class _BMIInputWidgetState extends State<BMIInputWidget> {
               });
             },
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
               double weight = double.parse(_weightController.text);
@@ -64,7 +63,7 @@ class _BMIInputWidgetState extends State<BMIInputWidget> {
 
               widget.onCalculate(weight, height, _selectedUnit);
             },
-            child: Text('Calculate BMI'),
+            child: const Text('Calculate BMI'),
           ),
         ],
       ),

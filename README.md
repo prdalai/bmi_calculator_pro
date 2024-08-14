@@ -15,4 +15,4 @@ Add the package to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  bmi_calculator: ^1.0.1
+  bmi_calculator: ^1.0.2
